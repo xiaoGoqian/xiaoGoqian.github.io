@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>nenOne</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>选择题</h1>
+<h4 class="newOne" id="newOne">1.一个盒子的margin为20px，padding为10px，border为1px, content宽为200px，高为50px,求IE盒子模型下，这个盒子需要占据的位置的高为()</h4>
+<h4>A.72px</h4>
+<h4>B.50px</h4>
+<h4  class="newOne_1" id="newOne_1">C.90px</h4>
+<h4>D.112px</h4>
+<h4 id="newTwo">2.以下不属于CSS3新增的伪类选择符的是()</h4>
+<h4>A.first-child</h4>
+<h4>B.last-child</h4>
+<h4 id="newTwo_2">C.disabled</h4>
+<h4>D.empty</h4>
+<h4 id="newThree">3.CSS3中设置矩形的阴影的属性的是()</h4>
+<h4>A.border-shadow</h4>
+<h4 id="newThree_3">B.box-shadow</h4>
+<h4>C.text-shadow</h4>
+<h4>D.border-radius</h4>
+<h4 id="newFour">4.下列哪一个是最合理的定义标题的方法?()</h4>
+<h4>A.&lt;span class=&quot;heading&quot;&gt;文章标题&lt;/span&gt;</h4>
+<h4>B.&lt;p&gt;&lt;b&gt;文章标题&lt;/b&gt;&lt;/p&gt;</h4>
+<h4 id="newFour_4">C.&lt;h1&gt;文章标题&lt;/h1&gt;</h4>
+<h4>D.&lt;strong&gt;文章标题&lt;/strong&gt;</h4>
+<h4 id="newFive">5.以下哪个单词不属于javascript的保留字()</h4>
+<h4>A.with</h4>
+<h4 id="newFive_5">B.parent</h4>
+<h4>C.class</h4>
+<h4>D.void</h4>
+<h4 id="newSix">6.以下哪条语句会产生运行错误()</h4>
+<h4 id="newSix_6">A.var obj =()</h4>
+<h4>B.var obj =[]</h4>
+<h4> C.var obj = {}</h4>
+<h4>D.var obj =//</h4>
+<h4 id="newSeven">7.请选择结果为真的表达式()</h4>
+<h4>A.null&nbsp;instanceof Object</h4>
+<h4>B.null === undefined</h4>
+<h4 id="newSeven_7">C.null == undefined</h4>
+<h4>D.NaN == NaN</h4>
+<h4 id="newEight">8.下面语句会输出()</h4>
+<h4>var str = &quot;welcome to beijing&quot;</h4>
+<h4>alert(str.charAt(9));</h4>
+<h4>A.welcoment</h4>
+<h4>B.welcome</h4>
+<h4>C.空格</h4>
+<h4 id="newEight_8">D.o</h4>
+<h4 id="newNine">9.在javascript中,可以使用Date对象的哪个方法返回一个月中的每一天()</h4>
+<h4 id="newNine_9">A.getDate()</h4>
+<h4>B.getTime()</h4>
+<h4>C.getMonth()</h4>
+<h4>D.getDay()</h4>
+<h4 id="newTen">10.关于正则表达式声明6位数字的邮编,以下代码正确的是()</h4>
+<h4>A.var reg = /\d6/</h4>
+<h4>B.var reg = \d{6}\</h4>
+<h4 id="newTen_10">C.var reg = /\d{6}/</h4>
+<h4>D.var reg = new RegExp('\d{6}')</h4>
+<h4 id="newEleven">11.typeof null 的结果是()</h4>
+<h4>A.null</h4>
+<h4>B.Null</h4>
+<h4>C.undefined</h4>
+<h4 id="newEleven_11">D.object</h4>
+<h4 id="newTwelve">12.在jquety中，如果想要从DOM中删除所有匹配的元素，下面哪个方法();</h4>
+<h4>A.delete()</h4>
+<h4>B.empty()</h4>
+<h4>C.remove()</h4>
+<h4 id="newTwelve_12">D.removeAll()</h4>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
+<script>
+  //第一题
+  var newOne = document.getElementById('newOne') 
+  newOne.onclick = function(){
+    newOne_1.style.color = 'orange';
+  }
+  //第二题
+  var newTwo = document.getElementById('newTwo') 
+  newTwo.onclick = function(){
+    newTwo_2.style.color = 'orange';
+  }
+  //第三题
+  var newThree = document.getElementById('newThree') 
+  newThree.onclick = function(){
+    newThree_3.style.color = 'orange';
+  }
+  //第四题
+  var newFour = document.getElementById('newFour') 
+  newFour.onclick = function(){
+    newFour_4.style.color = 'orange';
+  }
+  //第五题
+  var newFive = document.getElementById('newFive') 
+  newFive.onclick = function(){
+    newFive_5.style.color = 'orange';
+  }
+  //第六题
+  var newSix = document.getElementById('newSix') 
+  newSix.onclick = function(){
+    newSix_6.style.color = 'orange';
+  }
+  //第七题
+  var newSeven = document.getElementById('newSeven') 
+  newSeven.onclick = function(){
+    newSeven_7.style.color = 'orange';
+  }
+  //第八题
+  var newEight = document.getElementById('newEight') 
+  newEight.onclick = function(){
+    newEight_8.style.color = 'orange';
+  }
+  //第九题
+  var newNine = document.getElementById('newNine') 
+  newNine.onclick = function(){
+    newNine_9.style.color = 'orange';
+  }
+  //第十题
+  var newTen = document.getElementById('newTen') 
+  newTen.onclick = function(){
+    newTen_10.style.color = 'orange';
+  }
+  //第十一题
+  var newEleven = document.getElementById('newEleven') 
+  newEleven.onclick = function(){
+    newEleven_11.style.color = 'orange';
+  }
+  //第十二题
+  var newTwelve = document.getElementById('newTwelve') 
+  newTwelve.onclick = function(){
+    newTwelve_12.style.color = 'orange';
+  }
+</script>
